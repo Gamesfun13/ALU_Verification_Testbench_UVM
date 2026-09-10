@@ -1,0 +1,773 @@
+xrun: 22.09-s001: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+TOOL:	xrun	22.09-s001: Started on Dec 21, 2023 at 10:14:26 PST
+xrun
+	-uvm
+	-coverage U
+	-covoverwrite
+	ALUInterface.sv
+	ALUPackage.sv
+	ALU.sv
+	TB_Top.sv
+Recompiling... reason: file './Driver.sv' is newer than expected.
+	expected: Thu Dec 21 10:11:55 2023
+	actual:   Thu Dec 21 10:13:21 2023
+Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /proj/cad/CADENCE/XceliumMain/XCELIUMMAIN22.09.001/tools/methodology/UVM/CDNS-1.1d
+file: ALUPackage.sv
+    `uvm_object_utils(ALUSequence);
+                                  |
+xmvlog: *W,UEXPSC (ALUSequence.sv,3|34): Ignored unexpected semicolon following SystemVerilog description keyword (endfunction).
+        req.randomize();
+                    |
+xmvlog: *W,FUNTSK (ALUSequence.sv,14|20): function called as a task without void'().
+    `uvm_object_utils(arith_sequence);
+                                     |
+xmvlog: *W,UEXPSC (arith_sequence.sv,3|37): Ignored unexpected semicolon following SystemVerilog description keyword (endfunction).
+    `uvm_object_utils(logical_sequence);
+                                       |
+xmvlog: *W,UEXPSC (logical_sequence.sv,3|39): Ignored unexpected semicolon following SystemVerilog description keyword (endfunction).
+    `uvm_object_utils(shift_sequence);
+                                     |
+xmvlog: *W,UEXPSC (shift_sequence.sv,3|37): Ignored unexpected semicolon following SystemVerilog description keyword (endfunction).
+    `uvm_component_utils(Driver);
+                                |
+xmvlog: *W,UEXPSC (Driver.sv,3|32): Ignored unexpected semicolon following SystemVerilog description keyword (endfunction).
+    `uvm_component_utils(monitor);
+                                 |
+xmvlog: *W,UEXPSC (monitor.sv,2|33): Ignored unexpected semicolon following SystemVerilog description keyword (endfunction).
+    `uvm_component_utils(cov_monitor);
+                                     |
+xmvlog: *W,UEXPSC (cov_monitor.sv,3|37): Ignored unexpected semicolon following SystemVerilog description keyword (endfunction).
+    `uvm_component_utils(agent);
+                               |
+xmvlog: *W,UEXPSC (agent.sv,2|31): Ignored unexpected semicolon following SystemVerilog description keyword (endfunction).
+    `uvm_component_utils(scoreboard);
+                                    |
+xmvlog: *W,UEXPSC (scoreboard.sv,3|36): Ignored unexpected semicolon following SystemVerilog description keyword (endfunction).
+    `uvm_component_utils(Environment);
+                                     |
+xmvlog: *W,UEXPSC (Environment.sv,3|37): Ignored unexpected semicolon following SystemVerilog description keyword (endfunction).
+    `uvm_component_utils(Test);
+                              |
+xmvlog: *W,UEXPSC (Test.sv,3|30): Ignored unexpected semicolon following SystemVerilog description keyword (endfunction).
+        uvm_config_db#(virtual ALUInterface)::get(this,"","vif",vif);
+                                                |
+xmvlog: *W,FUNTSK (monitor.sv,14|48): function called as a task without void'().
+	package worklib.ALUPackage:sv
+		errors: 0, warnings: 13
+file: TB_Top.sv
+	module worklib.TB_Top:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		uvm_pkg
+		cdns_uvmapi
+		cdns_assert2uvm_pkg
+		cdns_uvm_pkg
+		ALUPackage
+		TB_Top
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Enabling instrumentation for coverage types: functional
+	Generating native compiled code:
+		worklib.TB_Top:sv <0x743b2d0c>
+			streams: 716, words: 598692
+	Building instance specific data structures.
+xmelab: *W,CGPIDF: Covergroup "per_instance" option , by default, is set as 0.
+xmelab: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                       Instances  Unique
+		Modules:                       2       2
+		Interfaces:                    1       1
+		Verilog packages:              5       5
+		Registers:                 14022   10246
+		Scalar wires:                  2       -
+		Named events:                  4      12
+		Always blocks:                 3       3
+		Initial blocks:              295     159
+		Parallel blocks:              26      27
+		Pseudo assignments:            2       2
+		Assertions:                    2       2
+		Covergroup Instances:          0       1
+		SV Class declarations:       203     316
+		SV Class specializations:    391     391
+	Writing initial simulation snapshot: worklib.TB_Top:sv
+Loading snapshot worklib.TB_Top:sv .................... Done
+SVSEED default: 1
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /proj/cad/CADENCE/XceliumMain/XCELIUMMAIN22.09.001/tools/xcelium/files/xmsimrc
+xcelium> source /proj/cad/CADENCE/XceliumMain/XCELIUMMAIN22.09.001/tools/methodology/UVM/CDNS-1.1d/additions/sv/files/tcl/uvm_sim.tcl
+xcelium> run
+----------------------------------------------------------------
+CDNS-UVM-1.1d (22.09-s001)
+(C) 2007-2013 Mentor Graphics Corporation
+(C) 2007-2013 Cadence Design Systems, Inc.
+(C) 2006-2013 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0: reporter [RNTST] Running test Test...
+UVM_INFO Test.sv(25) @ 0: uvm_test_top [uvm_test_top] <run_phase> started, objection raised.
+UVM_INFO Test.sv(26) @ 0: uvm_test_top [uvm_test_top] Start Of Test
+UVM_INFO Transaction.sv(17) @ 30: uvm_test_top.Environment.My Agent.my_sequencer@@arith_sequence.req [my_driver] A: 96 ,B: 23 ,Sel:0 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 40: reporter@@monitor_to_scb [my_monitor] A: 96 ,B: 23 ,Sel:0 ,Result:119  
+UVM_INFO Transaction.sv(17) @ 40: reporter@@monitor_to_scb [My Scoreboard] A: 96 ,B: 23 ,Sel:0 ,Result:119  
+UVM_INFO scoreboard.sv(41) @ 40: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 50: uvm_test_top.Environment.My Agent.my_sequencer@@arith_sequence.req [my_driver] A: 20 ,B:242 ,Sel:0 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 60: reporter@@monitor_to_scb [my_monitor] A: 20 ,B:242 ,Sel:0 ,Result:262  
+UVM_INFO Transaction.sv(17) @ 60: reporter@@monitor_to_scb [My Scoreboard] A: 20 ,B:242 ,Sel:0 ,Result:262  
+UVM_INFO scoreboard.sv(41) @ 60: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 70: uvm_test_top.Environment.My Agent.my_sequencer@@arith_sequence.req [my_driver] A:220 ,B:253 ,Sel:0 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 80: reporter@@monitor_to_scb [my_monitor] A:220 ,B:253 ,Sel:0 ,Result:473  
+UVM_INFO Transaction.sv(17) @ 80: reporter@@monitor_to_scb [My Scoreboard] A:220 ,B:253 ,Sel:0 ,Result:473  
+UVM_INFO scoreboard.sv(41) @ 80: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 90: uvm_test_top.Environment.My Agent.my_sequencer@@arith_sequence.req [my_driver] A:139 ,B:151 ,Sel:1 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 100: reporter@@monitor_to_scb [my_monitor] A:139 ,B:151 ,Sel:1 ,Result:500  
+UVM_INFO Transaction.sv(17) @ 100: reporter@@monitor_to_scb [My Scoreboard] A:139 ,B:151 ,Sel:1 ,Result:500  
+UVM_INFO scoreboard.sv(41) @ 100: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 110: uvm_test_top.Environment.My Agent.my_sequencer@@arith_sequence.req [my_driver] A:243 ,B:213 ,Sel:1 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 120: reporter@@monitor_to_scb [my_monitor] A:243 ,B:213 ,Sel:1 ,Result: 30  
+UVM_INFO Transaction.sv(17) @ 120: reporter@@monitor_to_scb [My Scoreboard] A:243 ,B:213 ,Sel:1 ,Result: 30  
+UVM_INFO scoreboard.sv(41) @ 120: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 130: uvm_test_top.Environment.My Agent.my_sequencer@@arith_sequence.req [my_driver] A: 67 ,B:163 ,Sel:0 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 140: reporter@@monitor_to_scb [my_monitor] A: 67 ,B:163 ,Sel:0 ,Result:230  
+UVM_INFO Transaction.sv(17) @ 140: reporter@@monitor_to_scb [My Scoreboard] A: 67 ,B:163 ,Sel:0 ,Result:230  
+UVM_INFO scoreboard.sv(41) @ 140: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 150: uvm_test_top.Environment.My Agent.my_sequencer@@arith_sequence.req [my_driver] A:122 ,B:183 ,Sel:1 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 160: reporter@@monitor_to_scb [my_monitor] A:122 ,B:183 ,Sel:1 ,Result:451  
+UVM_INFO Transaction.sv(17) @ 160: reporter@@monitor_to_scb [My Scoreboard] A:122 ,B:183 ,Sel:1 ,Result:451  
+UVM_INFO scoreboard.sv(41) @ 160: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 170: uvm_test_top.Environment.My Agent.my_sequencer@@arith_sequence.req [my_driver] A:106 ,B:184 ,Sel:0 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 180: reporter@@monitor_to_scb [my_monitor] A:106 ,B:184 ,Sel:0 ,Result:290  
+UVM_INFO Transaction.sv(17) @ 180: reporter@@monitor_to_scb [My Scoreboard] A:106 ,B:184 ,Sel:0 ,Result:290  
+UVM_INFO scoreboard.sv(41) @ 180: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 190: uvm_test_top.Environment.My Agent.my_sequencer@@arith_sequence.req [my_driver] A:111 ,B:233 ,Sel:1 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 200: reporter@@monitor_to_scb [my_monitor] A:111 ,B:233 ,Sel:1 ,Result:390  
+UVM_INFO Transaction.sv(17) @ 200: reporter@@monitor_to_scb [My Scoreboard] A:111 ,B:233 ,Sel:1 ,Result:390  
+UVM_INFO scoreboard.sv(41) @ 200: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 210: uvm_test_top.Environment.My Agent.my_sequencer@@arith_sequence.req [my_driver] A: 46 ,B:192 ,Sel:1 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 220: reporter@@monitor_to_scb [my_monitor] A: 46 ,B:192 ,Sel:1 ,Result:366  
+UVM_INFO Transaction.sv(17) @ 220: reporter@@monitor_to_scb [My Scoreboard] A: 46 ,B:192 ,Sel:1 ,Result:366  
+UVM_INFO scoreboard.sv(41) @ 220: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 230: uvm_test_top.Environment.My Agent.my_sequencer@@arith_sequence.req [my_driver] A:211 ,B: 37 ,Sel:0 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 240: reporter@@monitor_to_scb [my_monitor] A:211 ,B: 37 ,Sel:0 ,Result:248  
+UVM_INFO Transaction.sv(17) @ 240: reporter@@monitor_to_scb [My Scoreboard] A:211 ,B: 37 ,Sel:0 ,Result:248  
+UVM_INFO scoreboard.sv(41) @ 240: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 250: uvm_test_top.Environment.My Agent.my_sequencer@@arith_sequence.req [my_driver] A: 96 ,B:209 ,Sel:1 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 260: reporter@@monitor_to_scb [my_monitor] A: 96 ,B:209 ,Sel:1 ,Result:399  
+UVM_INFO Transaction.sv(17) @ 260: reporter@@monitor_to_scb [My Scoreboard] A: 96 ,B:209 ,Sel:1 ,Result:399  
+UVM_INFO scoreboard.sv(41) @ 260: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 270: uvm_test_top.Environment.My Agent.my_sequencer@@arith_sequence.req [my_driver] A:212 ,B: 12 ,Sel:1 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 280: reporter@@monitor_to_scb [my_monitor] A:212 ,B: 12 ,Sel:1 ,Result:200  
+UVM_INFO Transaction.sv(17) @ 280: reporter@@monitor_to_scb [My Scoreboard] A:212 ,B: 12 ,Sel:1 ,Result:200  
+UVM_INFO scoreboard.sv(41) @ 280: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 290: uvm_test_top.Environment.My Agent.my_sequencer@@arith_sequence.req [my_driver] A:  1 ,B: 51 ,Sel:1 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 300: reporter@@monitor_to_scb [my_monitor] A:  1 ,B: 51 ,Sel:1 ,Result:462  
+UVM_INFO Transaction.sv(17) @ 300: reporter@@monitor_to_scb [My Scoreboard] A:  1 ,B: 51 ,Sel:1 ,Result:462  
+UVM_INFO scoreboard.sv(41) @ 300: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 310: uvm_test_top.Environment.My Agent.my_sequencer@@arith_sequence.req [my_driver] A: 22 ,B:161 ,Sel:1 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 320: reporter@@monitor_to_scb [my_monitor] A: 22 ,B:161 ,Sel:1 ,Result:373  
+UVM_INFO Transaction.sv(17) @ 320: reporter@@monitor_to_scb [My Scoreboard] A: 22 ,B:161 ,Sel:1 ,Result:373  
+UVM_INFO scoreboard.sv(41) @ 320: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 330: uvm_test_top.Environment.My Agent.my_sequencer@@arith_sequence.req [my_driver] A: 63 ,B: 64 ,Sel:1 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 340: reporter@@monitor_to_scb [my_monitor] A: 63 ,B: 64 ,Sel:1 ,Result:511  
+UVM_INFO Transaction.sv(17) @ 340: reporter@@monitor_to_scb [My Scoreboard] A: 63 ,B: 64 ,Sel:1 ,Result:511  
+UVM_INFO scoreboard.sv(41) @ 340: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 350: uvm_test_top.Environment.My Agent.my_sequencer@@arith_sequence.req [my_driver] A: 34 ,B:203 ,Sel:1 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 360: reporter@@monitor_to_scb [my_monitor] A: 34 ,B:203 ,Sel:1 ,Result:343  
+UVM_INFO Transaction.sv(17) @ 360: reporter@@monitor_to_scb [My Scoreboard] A: 34 ,B:203 ,Sel:1 ,Result:343  
+UVM_INFO scoreboard.sv(41) @ 360: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 370: uvm_test_top.Environment.My Agent.my_sequencer@@arith_sequence.req [my_driver] A:235 ,B:158 ,Sel:1 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 380: reporter@@monitor_to_scb [my_monitor] A:235 ,B:158 ,Sel:1 ,Result: 77  
+UVM_INFO Transaction.sv(17) @ 380: reporter@@monitor_to_scb [My Scoreboard] A:235 ,B:158 ,Sel:1 ,Result: 77  
+UVM_INFO scoreboard.sv(41) @ 380: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 390: uvm_test_top.Environment.My Agent.my_sequencer@@arith_sequence.req [my_driver] A:156 ,B:255 ,Sel:0 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 400: reporter@@monitor_to_scb [my_monitor] A:156 ,B:255 ,Sel:0 ,Result:411  
+UVM_INFO Transaction.sv(17) @ 400: reporter@@monitor_to_scb [My Scoreboard] A:156 ,B:255 ,Sel:0 ,Result:411  
+UVM_INFO scoreboard.sv(41) @ 400: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 410: uvm_test_top.Environment.My Agent.my_sequencer@@arith_sequence.req [my_driver] A:  7 ,B:  5 ,Sel:0 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 420: reporter@@monitor_to_scb [my_monitor] A:  7 ,B:  5 ,Sel:0 ,Result: 12  
+UVM_INFO Transaction.sv(17) @ 420: reporter@@monitor_to_scb [My Scoreboard] A:  7 ,B:  5 ,Sel:0 ,Result: 12  
+UVM_INFO scoreboard.sv(41) @ 420: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 430: uvm_test_top.Environment.My Agent.my_sequencer@@arith_sequence.req [my_driver] A: 88 ,B:153 ,Sel:1 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 440: reporter@@monitor_to_scb [my_monitor] A: 88 ,B:153 ,Sel:1 ,Result:447  
+UVM_INFO Transaction.sv(17) @ 440: reporter@@monitor_to_scb [My Scoreboard] A: 88 ,B:153 ,Sel:1 ,Result:447  
+UVM_INFO scoreboard.sv(41) @ 440: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 450: uvm_test_top.Environment.My Agent.my_sequencer@@arith_sequence.req [my_driver] A:145 ,B:188 ,Sel:1 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 460: reporter@@monitor_to_scb [my_monitor] A:145 ,B:188 ,Sel:1 ,Result:469  
+UVM_INFO Transaction.sv(17) @ 460: reporter@@monitor_to_scb [My Scoreboard] A:145 ,B:188 ,Sel:1 ,Result:469  
+UVM_INFO scoreboard.sv(41) @ 460: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 470: uvm_test_top.Environment.My Agent.my_sequencer@@arith_sequence.req [my_driver] A:176 ,B: 39 ,Sel:1 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 480: reporter@@monitor_to_scb [my_monitor] A:176 ,B: 39 ,Sel:1 ,Result:137  
+UVM_INFO Transaction.sv(17) @ 480: reporter@@monitor_to_scb [My Scoreboard] A:176 ,B: 39 ,Sel:1 ,Result:137  
+UVM_INFO scoreboard.sv(41) @ 480: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 490: uvm_test_top.Environment.My Agent.my_sequencer@@arith_sequence.req [my_driver] A:183 ,B: 31 ,Sel:0 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 500: reporter@@monitor_to_scb [my_monitor] A:183 ,B: 31 ,Sel:0 ,Result:214  
+UVM_INFO Transaction.sv(17) @ 500: reporter@@monitor_to_scb [My Scoreboard] A:183 ,B: 31 ,Sel:0 ,Result:214  
+UVM_INFO scoreboard.sv(41) @ 500: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 510: uvm_test_top.Environment.My Agent.my_sequencer@@arith_sequence.req [my_driver] A:165 ,B:166 ,Sel:0 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 520: reporter@@monitor_to_scb [my_monitor] A:165 ,B:166 ,Sel:0 ,Result:331  
+UVM_INFO Transaction.sv(17) @ 520: reporter@@monitor_to_scb [My Scoreboard] A:165 ,B:166 ,Sel:0 ,Result:331  
+UVM_INFO scoreboard.sv(41) @ 520: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 530: uvm_test_top.Environment.My Agent.my_sequencer@@arith_sequence.req [my_driver] A: 76 ,B:211 ,Sel:1 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 540: reporter@@monitor_to_scb [my_monitor] A: 76 ,B:211 ,Sel:1 ,Result:377  
+UVM_INFO Transaction.sv(17) @ 540: reporter@@monitor_to_scb [My Scoreboard] A: 76 ,B:211 ,Sel:1 ,Result:377  
+UVM_INFO scoreboard.sv(41) @ 540: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 550: uvm_test_top.Environment.My Agent.my_sequencer@@arith_sequence.req [my_driver] A:219 ,B:142 ,Sel:1 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 560: reporter@@monitor_to_scb [my_monitor] A:219 ,B:142 ,Sel:1 ,Result: 77  
+UVM_INFO Transaction.sv(17) @ 560: reporter@@monitor_to_scb [My Scoreboard] A:219 ,B:142 ,Sel:1 ,Result: 77  
+UVM_INFO scoreboard.sv(41) @ 560: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 570: uvm_test_top.Environment.My Agent.my_sequencer@@arith_sequence.req [my_driver] A: 80 ,B:144 ,Sel:1 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 580: reporter@@monitor_to_scb [my_monitor] A: 80 ,B:144 ,Sel:1 ,Result:448  
+UVM_INFO Transaction.sv(17) @ 580: reporter@@monitor_to_scb [My Scoreboard] A: 80 ,B:144 ,Sel:1 ,Result:448  
+UVM_INFO scoreboard.sv(41) @ 580: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 590: uvm_test_top.Environment.My Agent.my_sequencer@@arith_sequence.req [my_driver] A:173 ,B: 32 ,Sel:0 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 600: reporter@@monitor_to_scb [my_monitor] A:173 ,B: 32 ,Sel:0 ,Result:205  
+UVM_INFO Transaction.sv(17) @ 600: reporter@@monitor_to_scb [My Scoreboard] A:173 ,B: 32 ,Sel:0 ,Result:205  
+UVM_INFO scoreboard.sv(41) @ 600: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 610: uvm_test_top.Environment.My Agent.my_sequencer@@arith_sequence.req [my_driver] A:241 ,B: 63 ,Sel:0 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 620: reporter@@monitor_to_scb [my_monitor] A:241 ,B: 63 ,Sel:0 ,Result:304  
+UVM_INFO Transaction.sv(17) @ 620: reporter@@monitor_to_scb [My Scoreboard] A:241 ,B: 63 ,Sel:0 ,Result:304  
+UVM_INFO scoreboard.sv(41) @ 620: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 630: uvm_test_top.Environment.My Agent.my_sequencer@@arith_sequence.req [my_driver] A:238 ,B:  3 ,Sel:1 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 640: reporter@@monitor_to_scb [my_monitor] A:238 ,B:  3 ,Sel:1 ,Result:235  
+UVM_INFO Transaction.sv(17) @ 640: reporter@@monitor_to_scb [My Scoreboard] A:238 ,B:  3 ,Sel:1 ,Result:235  
+UVM_INFO scoreboard.sv(41) @ 640: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 650: uvm_test_top.Environment.My Agent.my_sequencer@@arith_sequence.req [my_driver] A:211 ,B: 86 ,Sel:1 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 660: reporter@@monitor_to_scb [my_monitor] A:211 ,B: 86 ,Sel:1 ,Result:125  
+UVM_INFO Transaction.sv(17) @ 660: reporter@@monitor_to_scb [My Scoreboard] A:211 ,B: 86 ,Sel:1 ,Result:125  
+UVM_INFO scoreboard.sv(41) @ 660: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 670: uvm_test_top.Environment.My Agent.my_sequencer@@arith_sequence.req [my_driver] A:203 ,B:217 ,Sel:1 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 680: reporter@@monitor_to_scb [my_monitor] A:203 ,B:217 ,Sel:1 ,Result:498  
+UVM_INFO Transaction.sv(17) @ 680: reporter@@monitor_to_scb [My Scoreboard] A:203 ,B:217 ,Sel:1 ,Result:498  
+UVM_INFO scoreboard.sv(41) @ 680: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 690: uvm_test_top.Environment.My Agent.my_sequencer@@arith_sequence.req [my_driver] A:126 ,B:  1 ,Sel:0 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 700: reporter@@monitor_to_scb [my_monitor] A:126 ,B:  1 ,Sel:0 ,Result:127  
+UVM_INFO Transaction.sv(17) @ 700: reporter@@monitor_to_scb [My Scoreboard] A:126 ,B:  1 ,Sel:0 ,Result:127  
+UVM_INFO scoreboard.sv(41) @ 700: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 710: uvm_test_top.Environment.My Agent.my_sequencer@@arith_sequence.req [my_driver] A:235 ,B:207 ,Sel:0 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 720: reporter@@monitor_to_scb [my_monitor] A:235 ,B:207 ,Sel:0 ,Result:442  
+UVM_INFO Transaction.sv(17) @ 720: reporter@@monitor_to_scb [My Scoreboard] A:235 ,B:207 ,Sel:0 ,Result:442  
+UVM_INFO scoreboard.sv(41) @ 720: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 730: uvm_test_top.Environment.My Agent.my_sequencer@@arith_sequence.req [my_driver] A:107 ,B: 20 ,Sel:1 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 740: reporter@@monitor_to_scb [my_monitor] A:107 ,B: 20 ,Sel:1 ,Result: 87  
+UVM_INFO Transaction.sv(17) @ 740: reporter@@monitor_to_scb [My Scoreboard] A:107 ,B: 20 ,Sel:1 ,Result: 87  
+UVM_INFO scoreboard.sv(41) @ 740: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 750: uvm_test_top.Environment.My Agent.my_sequencer@@arith_sequence.req [my_driver] A:165 ,B:254 ,Sel:1 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 760: reporter@@monitor_to_scb [my_monitor] A:165 ,B:254 ,Sel:1 ,Result:423  
+UVM_INFO Transaction.sv(17) @ 760: reporter@@monitor_to_scb [My Scoreboard] A:165 ,B:254 ,Sel:1 ,Result:423  
+UVM_INFO scoreboard.sv(41) @ 760: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 770: uvm_test_top.Environment.My Agent.my_sequencer@@arith_sequence.req [my_driver] A:199 ,B: 48 ,Sel:1 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 780: reporter@@monitor_to_scb [my_monitor] A:199 ,B: 48 ,Sel:1 ,Result:151  
+UVM_INFO Transaction.sv(17) @ 780: reporter@@monitor_to_scb [My Scoreboard] A:199 ,B: 48 ,Sel:1 ,Result:151  
+UVM_INFO scoreboard.sv(41) @ 780: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 790: uvm_test_top.Environment.My Agent.my_sequencer@@arith_sequence.req [my_driver] A:208 ,B:240 ,Sel:0 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 800: reporter@@monitor_to_scb [my_monitor] A:208 ,B:240 ,Sel:0 ,Result:448  
+UVM_INFO Transaction.sv(17) @ 800: reporter@@monitor_to_scb [My Scoreboard] A:208 ,B:240 ,Sel:0 ,Result:448  
+UVM_INFO scoreboard.sv(41) @ 800: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 810: uvm_test_top.Environment.My Agent.my_sequencer@@arith_sequence.req [my_driver] A:191 ,B: 63 ,Sel:0 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 820: reporter@@monitor_to_scb [my_monitor] A:191 ,B: 63 ,Sel:0 ,Result:254  
+UVM_INFO Transaction.sv(17) @ 820: reporter@@monitor_to_scb [My Scoreboard] A:191 ,B: 63 ,Sel:0 ,Result:254  
+UVM_INFO scoreboard.sv(41) @ 820: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 830: uvm_test_top.Environment.My Agent.my_sequencer@@arith_sequence.req [my_driver] A:150 ,B: 27 ,Sel:1 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 840: reporter@@monitor_to_scb [my_monitor] A:150 ,B: 27 ,Sel:1 ,Result:123  
+UVM_INFO Transaction.sv(17) @ 840: reporter@@monitor_to_scb [My Scoreboard] A:150 ,B: 27 ,Sel:1 ,Result:123  
+UVM_INFO scoreboard.sv(41) @ 840: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 850: uvm_test_top.Environment.My Agent.my_sequencer@@arith_sequence.req [my_driver] A: 38 ,B:158 ,Sel:1 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 860: reporter@@monitor_to_scb [my_monitor] A: 38 ,B:158 ,Sel:1 ,Result:392  
+UVM_INFO Transaction.sv(17) @ 860: reporter@@monitor_to_scb [My Scoreboard] A: 38 ,B:158 ,Sel:1 ,Result:392  
+UVM_INFO scoreboard.sv(41) @ 860: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 870: uvm_test_top.Environment.My Agent.my_sequencer@@arith_sequence.req [my_driver] A:203 ,B: 80 ,Sel:1 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 880: reporter@@monitor_to_scb [my_monitor] A:203 ,B: 80 ,Sel:1 ,Result:123  
+UVM_INFO Transaction.sv(17) @ 880: reporter@@monitor_to_scb [My Scoreboard] A:203 ,B: 80 ,Sel:1 ,Result:123  
+UVM_INFO scoreboard.sv(41) @ 880: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 890: uvm_test_top.Environment.My Agent.my_sequencer@@arith_sequence.req [my_driver] A:252 ,B:  6 ,Sel:1 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 900: reporter@@monitor_to_scb [my_monitor] A:252 ,B:  6 ,Sel:1 ,Result:246  
+UVM_INFO Transaction.sv(17) @ 900: reporter@@monitor_to_scb [My Scoreboard] A:252 ,B:  6 ,Sel:1 ,Result:246  
+UVM_INFO scoreboard.sv(41) @ 900: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 910: uvm_test_top.Environment.My Agent.my_sequencer@@arith_sequence.req [my_driver] A: 66 ,B:236 ,Sel:1 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 920: reporter@@monitor_to_scb [my_monitor] A: 66 ,B:236 ,Sel:1 ,Result:342  
+UVM_INFO Transaction.sv(17) @ 920: reporter@@monitor_to_scb [My Scoreboard] A: 66 ,B:236 ,Sel:1 ,Result:342  
+UVM_INFO scoreboard.sv(41) @ 920: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 930: uvm_test_top.Environment.My Agent.my_sequencer@@arith_sequence.req [my_driver] A:110 ,B: 26 ,Sel:1 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 940: reporter@@monitor_to_scb [my_monitor] A:110 ,B: 26 ,Sel:1 ,Result: 84  
+UVM_INFO Transaction.sv(17) @ 940: reporter@@monitor_to_scb [My Scoreboard] A:110 ,B: 26 ,Sel:1 ,Result: 84  
+UVM_INFO scoreboard.sv(41) @ 940: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 950: uvm_test_top.Environment.My Agent.my_sequencer@@arith_sequence.req [my_driver] A:130 ,B: 29 ,Sel:1 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 960: reporter@@monitor_to_scb [my_monitor] A:130 ,B: 29 ,Sel:1 ,Result:101  
+UVM_INFO Transaction.sv(17) @ 960: reporter@@monitor_to_scb [My Scoreboard] A:130 ,B: 29 ,Sel:1 ,Result:101  
+UVM_INFO scoreboard.sv(41) @ 960: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 970: uvm_test_top.Environment.My Agent.my_sequencer@@arith_sequence.req [my_driver] A: 34 ,B:220 ,Sel:0 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 980: reporter@@monitor_to_scb [my_monitor] A: 34 ,B:220 ,Sel:0 ,Result:254  
+UVM_INFO Transaction.sv(17) @ 980: reporter@@monitor_to_scb [My Scoreboard] A: 34 ,B:220 ,Sel:0 ,Result:254  
+UVM_INFO scoreboard.sv(41) @ 980: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 990: uvm_test_top.Environment.My Agent.my_sequencer@@arith_sequence.req [my_driver] A:  4 ,B:181 ,Sel:1 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 1000: reporter@@monitor_to_scb [my_monitor] A:  4 ,B:181 ,Sel:1 ,Result:335  
+UVM_INFO Transaction.sv(17) @ 1000: reporter@@monitor_to_scb [My Scoreboard] A:  4 ,B:181 ,Sel:1 ,Result:335  
+UVM_INFO scoreboard.sv(41) @ 1000: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 1010: uvm_test_top.Environment.My Agent.my_sequencer@@arith_sequence.req [my_driver] A:159 ,B: 51 ,Sel:1 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 1020: reporter@@monitor_to_scb [my_monitor] A:159 ,B: 51 ,Sel:1 ,Result:108  
+UVM_INFO Transaction.sv(17) @ 1020: reporter@@monitor_to_scb [My Scoreboard] A:159 ,B: 51 ,Sel:1 ,Result:108  
+UVM_INFO scoreboard.sv(41) @ 1020: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 1030: uvm_test_top.Environment.My Agent.my_sequencer@@logical_sequence.req [my_driver] A:105 ,B:177 ,Sel:3 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 1040: reporter@@monitor_to_scb [my_monitor] A:105 ,B:177 ,Sel:3 ,Result:249  
+UVM_INFO Transaction.sv(17) @ 1040: reporter@@monitor_to_scb [My Scoreboard] A:105 ,B:177 ,Sel:3 ,Result:249  
+UVM_INFO scoreboard.sv(41) @ 1040: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 1050: uvm_test_top.Environment.My Agent.my_sequencer@@logical_sequence.req [my_driver] A:119 ,B: 23 ,Sel:4 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 1060: reporter@@monitor_to_scb [my_monitor] A:119 ,B: 23 ,Sel:4 ,Result: 96  
+UVM_INFO Transaction.sv(17) @ 1060: reporter@@monitor_to_scb [My Scoreboard] A:119 ,B: 23 ,Sel:4 ,Result: 96  
+UVM_INFO scoreboard.sv(41) @ 1060: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 1070: uvm_test_top.Environment.My Agent.my_sequencer@@logical_sequence.req [my_driver] A:229 ,B:151 ,Sel:7 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 1080: reporter@@monitor_to_scb [my_monitor] A:229 ,B:151 ,Sel:7 ,Result:229  
+UVM_INFO Transaction.sv(17) @ 1080: reporter@@monitor_to_scb [My Scoreboard] A:229 ,B:151 ,Sel:7 ,Result:229  
+UVM_INFO scoreboard.sv(41) @ 1080: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 1090: uvm_test_top.Environment.My Agent.my_sequencer@@logical_sequence.req [my_driver] A:148 ,B: 49 ,Sel:4 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 1100: reporter@@monitor_to_scb [my_monitor] A:148 ,B: 49 ,Sel:4 ,Result:165  
+UVM_INFO Transaction.sv(17) @ 1100: reporter@@monitor_to_scb [My Scoreboard] A:148 ,B: 49 ,Sel:4 ,Result:165  
+UVM_INFO scoreboard.sv(41) @ 1100: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 1110: uvm_test_top.Environment.My Agent.my_sequencer@@logical_sequence.req [my_driver] A:252 ,B:111 ,Sel:2 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 1120: reporter@@monitor_to_scb [my_monitor] A:252 ,B:111 ,Sel:2 ,Result:108  
+UVM_INFO Transaction.sv(17) @ 1120: reporter@@monitor_to_scb [My Scoreboard] A:252 ,B:111 ,Sel:2 ,Result:108  
+UVM_INFO scoreboard.sv(41) @ 1120: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 1130: uvm_test_top.Environment.My Agent.my_sequencer@@logical_sequence.req [my_driver] A:121 ,B:223 ,Sel:2 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 1140: reporter@@monitor_to_scb [my_monitor] A:121 ,B:223 ,Sel:2 ,Result: 89  
+UVM_INFO Transaction.sv(17) @ 1140: reporter@@monitor_to_scb [My Scoreboard] A:121 ,B:223 ,Sel:2 ,Result: 89  
+UVM_INFO scoreboard.sv(41) @ 1140: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 1150: uvm_test_top.Environment.My Agent.my_sequencer@@logical_sequence.req [my_driver] A:131 ,B: 81 ,Sel:2 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 1160: reporter@@monitor_to_scb [my_monitor] A:131 ,B: 81 ,Sel:2 ,Result:  1  
+UVM_INFO Transaction.sv(17) @ 1160: reporter@@monitor_to_scb [My Scoreboard] A:131 ,B: 81 ,Sel:2 ,Result:  1  
+UVM_INFO scoreboard.sv(41) @ 1160: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 1170: uvm_test_top.Environment.My Agent.my_sequencer@@logical_sequence.req [my_driver] A:161 ,B:244 ,Sel:4 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 1180: reporter@@monitor_to_scb [my_monitor] A:161 ,B:244 ,Sel:4 ,Result: 85  
+UVM_INFO Transaction.sv(17) @ 1180: reporter@@monitor_to_scb [My Scoreboard] A:161 ,B:244 ,Sel:4 ,Result: 85  
+UVM_INFO scoreboard.sv(41) @ 1180: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 1190: uvm_test_top.Environment.My Agent.my_sequencer@@logical_sequence.req [my_driver] A:165 ,B: 37 ,Sel:7 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 1200: reporter@@monitor_to_scb [my_monitor] A:165 ,B: 37 ,Sel:7 ,Result:165  
+UVM_INFO Transaction.sv(17) @ 1200: reporter@@monitor_to_scb [My Scoreboard] A:165 ,B: 37 ,Sel:7 ,Result:165  
+UVM_INFO scoreboard.sv(41) @ 1200: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 1210: uvm_test_top.Environment.My Agent.my_sequencer@@logical_sequence.req [my_driver] A:100 ,B:252 ,Sel:7 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 1220: reporter@@monitor_to_scb [my_monitor] A:100 ,B:252 ,Sel:7 ,Result:100  
+UVM_INFO Transaction.sv(17) @ 1220: reporter@@monitor_to_scb [My Scoreboard] A:100 ,B:252 ,Sel:7 ,Result:100  
+UVM_INFO scoreboard.sv(41) @ 1220: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 1230: uvm_test_top.Environment.My Agent.my_sequencer@@logical_sequence.req [my_driver] A: 10 ,B: 97 ,Sel:4 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 1240: reporter@@monitor_to_scb [my_monitor] A: 10 ,B: 97 ,Sel:4 ,Result:107  
+UVM_INFO Transaction.sv(17) @ 1240: reporter@@monitor_to_scb [My Scoreboard] A: 10 ,B: 97 ,Sel:4 ,Result:107  
+UVM_INFO scoreboard.sv(41) @ 1240: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 1250: uvm_test_top.Environment.My Agent.my_sequencer@@logical_sequence.req [my_driver] A:151 ,B: 13 ,Sel:7 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 1260: reporter@@monitor_to_scb [my_monitor] A:151 ,B: 13 ,Sel:7 ,Result:151  
+UVM_INFO Transaction.sv(17) @ 1260: reporter@@monitor_to_scb [My Scoreboard] A:151 ,B: 13 ,Sel:7 ,Result:151  
+UVM_INFO scoreboard.sv(41) @ 1260: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 1270: uvm_test_top.Environment.My Agent.my_sequencer@@logical_sequence.req [my_driver] A: 10 ,B:143 ,Sel:2 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 1280: reporter@@monitor_to_scb [my_monitor] A: 10 ,B:143 ,Sel:2 ,Result: 10  
+UVM_INFO Transaction.sv(17) @ 1280: reporter@@monitor_to_scb [My Scoreboard] A: 10 ,B:143 ,Sel:2 ,Result: 10  
+UVM_INFO scoreboard.sv(41) @ 1280: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 1290: uvm_test_top.Environment.My Agent.my_sequencer@@logical_sequence.req [my_driver] A: 56 ,B:111 ,Sel:7 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 1300: reporter@@monitor_to_scb [my_monitor] A: 56 ,B:111 ,Sel:7 ,Result: 56  
+UVM_INFO Transaction.sv(17) @ 1300: reporter@@monitor_to_scb [My Scoreboard] A: 56 ,B:111 ,Sel:7 ,Result: 56  
+UVM_INFO scoreboard.sv(41) @ 1300: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 1310: uvm_test_top.Environment.My Agent.my_sequencer@@logical_sequence.req [my_driver] A:121 ,B:198 ,Sel:3 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 1320: reporter@@monitor_to_scb [my_monitor] A:121 ,B:198 ,Sel:3 ,Result:255  
+UVM_INFO Transaction.sv(17) @ 1320: reporter@@monitor_to_scb [My Scoreboard] A:121 ,B:198 ,Sel:3 ,Result:255  
+UVM_INFO scoreboard.sv(41) @ 1320: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 1330: uvm_test_top.Environment.My Agent.my_sequencer@@logical_sequence.req [my_driver] A:117 ,B:195 ,Sel:4 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 1340: reporter@@monitor_to_scb [my_monitor] A:117 ,B:195 ,Sel:4 ,Result:182  
+UVM_INFO Transaction.sv(17) @ 1340: reporter@@monitor_to_scb [My Scoreboard] A:117 ,B:195 ,Sel:4 ,Result:182  
+UVM_INFO scoreboard.sv(41) @ 1340: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 1350: uvm_test_top.Environment.My Agent.my_sequencer@@logical_sequence.req [my_driver] A: 88 ,B:  7 ,Sel:3 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 1360: reporter@@monitor_to_scb [my_monitor] A: 88 ,B:  7 ,Sel:3 ,Result: 95  
+UVM_INFO Transaction.sv(17) @ 1360: reporter@@monitor_to_scb [My Scoreboard] A: 88 ,B:  7 ,Sel:3 ,Result: 95  
+UVM_INFO scoreboard.sv(41) @ 1360: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 1370: uvm_test_top.Environment.My Agent.my_sequencer@@logical_sequence.req [my_driver] A:244 ,B: 56 ,Sel:2 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 1380: reporter@@monitor_to_scb [my_monitor] A:244 ,B: 56 ,Sel:2 ,Result: 48  
+UVM_INFO Transaction.sv(17) @ 1380: reporter@@monitor_to_scb [My Scoreboard] A:244 ,B: 56 ,Sel:2 ,Result: 48  
+UVM_INFO scoreboard.sv(41) @ 1380: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 1390: uvm_test_top.Environment.My Agent.my_sequencer@@logical_sequence.req [my_driver] A:165 ,B:153 ,Sel:3 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 1400: reporter@@monitor_to_scb [my_monitor] A:165 ,B:153 ,Sel:3 ,Result:189  
+UVM_INFO Transaction.sv(17) @ 1400: reporter@@monitor_to_scb [My Scoreboard] A:165 ,B:153 ,Sel:3 ,Result:189  
+UVM_INFO scoreboard.sv(41) @ 1400: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 1410: uvm_test_top.Environment.My Agent.my_sequencer@@logical_sequence.req [my_driver] A: 61 ,B:136 ,Sel:3 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 1420: reporter@@monitor_to_scb [my_monitor] A: 61 ,B:136 ,Sel:3 ,Result:189  
+UVM_INFO Transaction.sv(17) @ 1420: reporter@@monitor_to_scb [My Scoreboard] A: 61 ,B:136 ,Sel:3 ,Result:189  
+UVM_INFO scoreboard.sv(41) @ 1420: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 1430: uvm_test_top.Environment.My Agent.my_sequencer@@logical_sequence.req [my_driver] A:188 ,B:190 ,Sel:7 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 1440: reporter@@monitor_to_scb [my_monitor] A:188 ,B:190 ,Sel:7 ,Result:188  
+UVM_INFO Transaction.sv(17) @ 1440: reporter@@monitor_to_scb [My Scoreboard] A:188 ,B:190 ,Sel:7 ,Result:188  
+UVM_INFO scoreboard.sv(41) @ 1440: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 1450: uvm_test_top.Environment.My Agent.my_sequencer@@logical_sequence.req [my_driver] A:199 ,B:248 ,Sel:3 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 1460: reporter@@monitor_to_scb [my_monitor] A:199 ,B:248 ,Sel:3 ,Result:255  
+UVM_INFO Transaction.sv(17) @ 1460: reporter@@monitor_to_scb [My Scoreboard] A:199 ,B:248 ,Sel:3 ,Result:255  
+UVM_INFO scoreboard.sv(41) @ 1460: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 1470: uvm_test_top.Environment.My Agent.my_sequencer@@logical_sequence.req [my_driver] A: 20 ,B: 76 ,Sel:3 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 1480: reporter@@monitor_to_scb [my_monitor] A: 20 ,B: 76 ,Sel:3 ,Result: 92  
+UVM_INFO Transaction.sv(17) @ 1480: reporter@@monitor_to_scb [My Scoreboard] A: 20 ,B: 76 ,Sel:3 ,Result: 92  
+UVM_INFO scoreboard.sv(41) @ 1480: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 1490: uvm_test_top.Environment.My Agent.my_sequencer@@logical_sequence.req [my_driver] A:192 ,B:185 ,Sel:3 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 1500: reporter@@monitor_to_scb [my_monitor] A:192 ,B:185 ,Sel:3 ,Result:249  
+UVM_INFO Transaction.sv(17) @ 1500: reporter@@monitor_to_scb [My Scoreboard] A:192 ,B:185 ,Sel:3 ,Result:249  
+UVM_INFO scoreboard.sv(41) @ 1500: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 1510: uvm_test_top.Environment.My Agent.my_sequencer@@logical_sequence.req [my_driver] A:174 ,B: 64 ,Sel:7 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 1520: reporter@@monitor_to_scb [my_monitor] A:174 ,B: 64 ,Sel:7 ,Result:174  
+UVM_INFO Transaction.sv(17) @ 1520: reporter@@monitor_to_scb [My Scoreboard] A:174 ,B: 64 ,Sel:7 ,Result:174  
+UVM_INFO scoreboard.sv(41) @ 1520: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 1530: uvm_test_top.Environment.My Agent.my_sequencer@@logical_sequence.req [my_driver] A:131 ,B: 15 ,Sel:7 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 1540: reporter@@monitor_to_scb [my_monitor] A:131 ,B: 15 ,Sel:7 ,Result:131  
+UVM_INFO Transaction.sv(17) @ 1540: reporter@@monitor_to_scb [My Scoreboard] A:131 ,B: 15 ,Sel:7 ,Result:131  
+UVM_INFO scoreboard.sv(41) @ 1540: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 1550: uvm_test_top.Environment.My Agent.my_sequencer@@logical_sequence.req [my_driver] A: 17 ,B:202 ,Sel:7 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 1560: reporter@@monitor_to_scb [my_monitor] A: 17 ,B:202 ,Sel:7 ,Result: 17  
+UVM_INFO Transaction.sv(17) @ 1560: reporter@@monitor_to_scb [My Scoreboard] A: 17 ,B:202 ,Sel:7 ,Result: 17  
+UVM_INFO scoreboard.sv(41) @ 1560: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 1570: uvm_test_top.Environment.My Agent.my_sequencer@@logical_sequence.req [my_driver] A:135 ,B:204 ,Sel:3 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 1580: reporter@@monitor_to_scb [my_monitor] A:135 ,B:204 ,Sel:3 ,Result:207  
+UVM_INFO Transaction.sv(17) @ 1580: reporter@@monitor_to_scb [My Scoreboard] A:135 ,B:204 ,Sel:3 ,Result:207  
+UVM_INFO scoreboard.sv(41) @ 1580: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 1590: uvm_test_top.Environment.My Agent.my_sequencer@@logical_sequence.req [my_driver] A:227 ,B: 92 ,Sel:4 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 1600: reporter@@monitor_to_scb [my_monitor] A:227 ,B: 92 ,Sel:4 ,Result:191  
+UVM_INFO Transaction.sv(17) @ 1600: reporter@@monitor_to_scb [My Scoreboard] A:227 ,B: 92 ,Sel:4 ,Result:191  
+UVM_INFO scoreboard.sv(41) @ 1600: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 1610: uvm_test_top.Environment.My Agent.my_sequencer@@logical_sequence.req [my_driver] A: 39 ,B:123 ,Sel:4 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 1620: reporter@@monitor_to_scb [my_monitor] A: 39 ,B:123 ,Sel:4 ,Result: 92  
+UVM_INFO Transaction.sv(17) @ 1620: reporter@@monitor_to_scb [My Scoreboard] A: 39 ,B:123 ,Sel:4 ,Result: 92  
+UVM_INFO scoreboard.sv(41) @ 1620: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 1630: uvm_test_top.Environment.My Agent.my_sequencer@@logical_sequence.req [my_driver] A: 37 ,B: 63 ,Sel:3 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 1640: reporter@@monitor_to_scb [my_monitor] A: 37 ,B: 63 ,Sel:3 ,Result: 63  
+UVM_INFO Transaction.sv(17) @ 1640: reporter@@monitor_to_scb [My Scoreboard] A: 37 ,B: 63 ,Sel:3 ,Result: 63  
+UVM_INFO scoreboard.sv(41) @ 1640: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 1650: uvm_test_top.Environment.My Agent.my_sequencer@@logical_sequence.req [my_driver] A:  9 ,B:146 ,Sel:7 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 1660: reporter@@monitor_to_scb [my_monitor] A:  9 ,B:146 ,Sel:7 ,Result:  9  
+UVM_INFO Transaction.sv(17) @ 1660: reporter@@monitor_to_scb [My Scoreboard] A:  9 ,B:146 ,Sel:7 ,Result:  9  
+UVM_INFO scoreboard.sv(41) @ 1660: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 1670: uvm_test_top.Environment.My Agent.my_sequencer@@logical_sequence.req [my_driver] A:  2 ,B: 21 ,Sel:7 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 1680: reporter@@monitor_to_scb [my_monitor] A:  2 ,B: 21 ,Sel:7 ,Result:  2  
+UVM_INFO Transaction.sv(17) @ 1680: reporter@@monitor_to_scb [My Scoreboard] A:  2 ,B: 21 ,Sel:7 ,Result:  2  
+UVM_INFO scoreboard.sv(41) @ 1680: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 1690: uvm_test_top.Environment.My Agent.my_sequencer@@logical_sequence.req [my_driver] A:135 ,B:155 ,Sel:7 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 1700: reporter@@monitor_to_scb [my_monitor] A:135 ,B:155 ,Sel:7 ,Result:135  
+UVM_INFO Transaction.sv(17) @ 1700: reporter@@monitor_to_scb [My Scoreboard] A:135 ,B:155 ,Sel:7 ,Result:135  
+UVM_INFO scoreboard.sv(41) @ 1700: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 1710: uvm_test_top.Environment.My Agent.my_sequencer@@logical_sequence.req [my_driver] A:244 ,B:105 ,Sel:3 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 1720: reporter@@monitor_to_scb [my_monitor] A:244 ,B:105 ,Sel:3 ,Result:253  
+UVM_INFO Transaction.sv(17) @ 1720: reporter@@monitor_to_scb [My Scoreboard] A:244 ,B:105 ,Sel:3 ,Result:253  
+UVM_INFO scoreboard.sv(41) @ 1720: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 1730: uvm_test_top.Environment.My Agent.my_sequencer@@logical_sequence.req [my_driver] A:161 ,B: 80 ,Sel:3 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 1740: reporter@@monitor_to_scb [my_monitor] A:161 ,B: 80 ,Sel:3 ,Result:241  
+UVM_INFO Transaction.sv(17) @ 1740: reporter@@monitor_to_scb [My Scoreboard] A:161 ,B: 80 ,Sel:3 ,Result:241  
+UVM_INFO scoreboard.sv(41) @ 1740: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 1750: uvm_test_top.Environment.My Agent.my_sequencer@@logical_sequence.req [my_driver] A:220 ,B: 58 ,Sel:3 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 1760: reporter@@monitor_to_scb [my_monitor] A:220 ,B: 58 ,Sel:3 ,Result:254  
+UVM_INFO Transaction.sv(17) @ 1760: reporter@@monitor_to_scb [My Scoreboard] A:220 ,B: 58 ,Sel:3 ,Result:254  
+UVM_INFO scoreboard.sv(41) @ 1760: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 1770: uvm_test_top.Environment.My Agent.my_sequencer@@logical_sequence.req [my_driver] A:253 ,B:108 ,Sel:7 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 1780: reporter@@monitor_to_scb [my_monitor] A:253 ,B:108 ,Sel:7 ,Result:253  
+UVM_INFO Transaction.sv(17) @ 1780: reporter@@monitor_to_scb [My Scoreboard] A:253 ,B:108 ,Sel:7 ,Result:253  
+UVM_INFO scoreboard.sv(41) @ 1780: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 1790: uvm_test_top.Environment.My Agent.my_sequencer@@logical_sequence.req [my_driver] A:  6 ,B:115 ,Sel:3 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 1800: reporter@@monitor_to_scb [my_monitor] A:  6 ,B:115 ,Sel:3 ,Result:119  
+UVM_INFO Transaction.sv(17) @ 1800: reporter@@monitor_to_scb [My Scoreboard] A:  6 ,B:115 ,Sel:3 ,Result:119  
+UVM_INFO scoreboard.sv(41) @ 1800: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 1810: uvm_test_top.Environment.My Agent.my_sequencer@@logical_sequence.req [my_driver] A:200 ,B:217 ,Sel:3 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 1820: reporter@@monitor_to_scb [my_monitor] A:200 ,B:217 ,Sel:3 ,Result:217  
+UVM_INFO Transaction.sv(17) @ 1820: reporter@@monitor_to_scb [My Scoreboard] A:200 ,B:217 ,Sel:3 ,Result:217  
+UVM_INFO scoreboard.sv(41) @ 1820: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 1830: uvm_test_top.Environment.My Agent.my_sequencer@@logical_sequence.req [my_driver] A:204 ,B: 87 ,Sel:7 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 1840: reporter@@monitor_to_scb [my_monitor] A:204 ,B: 87 ,Sel:7 ,Result:204  
+UVM_INFO Transaction.sv(17) @ 1840: reporter@@monitor_to_scb [My Scoreboard] A:204 ,B: 87 ,Sel:7 ,Result:204  
+UVM_INFO scoreboard.sv(41) @ 1840: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 1850: uvm_test_top.Environment.My Agent.my_sequencer@@logical_sequence.req [my_driver] A: 92 ,B:218 ,Sel:3 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 1860: reporter@@monitor_to_scb [my_monitor] A: 92 ,B:218 ,Sel:3 ,Result:222  
+UVM_INFO Transaction.sv(17) @ 1860: reporter@@monitor_to_scb [My Scoreboard] A: 92 ,B:218 ,Sel:3 ,Result:222  
+UVM_INFO scoreboard.sv(41) @ 1860: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 1870: uvm_test_top.Environment.My Agent.my_sequencer@@logical_sequence.req [my_driver] A:212 ,B:234 ,Sel:4 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 1880: reporter@@monitor_to_scb [my_monitor] A:212 ,B:234 ,Sel:4 ,Result: 62  
+UVM_INFO Transaction.sv(17) @ 1880: reporter@@monitor_to_scb [My Scoreboard] A:212 ,B:234 ,Sel:4 ,Result: 62  
+UVM_INFO scoreboard.sv(41) @ 1880: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 1890: uvm_test_top.Environment.My Agent.my_sequencer@@logical_sequence.req [my_driver] A: 50 ,B: 66 ,Sel:3 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 1900: reporter@@monitor_to_scb [my_monitor] A: 50 ,B: 66 ,Sel:3 ,Result:114  
+UVM_INFO Transaction.sv(17) @ 1900: reporter@@monitor_to_scb [My Scoreboard] A: 50 ,B: 66 ,Sel:3 ,Result:114  
+UVM_INFO scoreboard.sv(41) @ 1900: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 1910: uvm_test_top.Environment.My Agent.my_sequencer@@logical_sequence.req [my_driver] A:120 ,B: 40 ,Sel:7 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 1920: reporter@@monitor_to_scb [my_monitor] A:120 ,B: 40 ,Sel:7 ,Result:120  
+UVM_INFO Transaction.sv(17) @ 1920: reporter@@monitor_to_scb [My Scoreboard] A:120 ,B: 40 ,Sel:7 ,Result:120  
+UVM_INFO scoreboard.sv(41) @ 1920: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 1930: uvm_test_top.Environment.My Agent.my_sequencer@@logical_sequence.req [my_driver] A:119 ,B:180 ,Sel:2 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 1940: reporter@@monitor_to_scb [my_monitor] A:119 ,B:180 ,Sel:2 ,Result: 52  
+UVM_INFO Transaction.sv(17) @ 1940: reporter@@monitor_to_scb [My Scoreboard] A:119 ,B:180 ,Sel:2 ,Result: 52  
+UVM_INFO scoreboard.sv(41) @ 1940: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 1950: uvm_test_top.Environment.My Agent.my_sequencer@@logical_sequence.req [my_driver] A:184 ,B: 89 ,Sel:7 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 1960: reporter@@monitor_to_scb [my_monitor] A:184 ,B: 89 ,Sel:7 ,Result:184  
+UVM_INFO Transaction.sv(17) @ 1960: reporter@@monitor_to_scb [My Scoreboard] A:184 ,B: 89 ,Sel:7 ,Result:184  
+UVM_INFO scoreboard.sv(41) @ 1960: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 1970: uvm_test_top.Environment.My Agent.my_sequencer@@logical_sequence.req [my_driver] A: 88 ,B: 24 ,Sel:4 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 1980: reporter@@monitor_to_scb [my_monitor] A: 88 ,B: 24 ,Sel:4 ,Result: 64  
+UVM_INFO Transaction.sv(17) @ 1980: reporter@@monitor_to_scb [My Scoreboard] A: 88 ,B: 24 ,Sel:4 ,Result: 64  
+UVM_INFO scoreboard.sv(41) @ 1980: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 1990: uvm_test_top.Environment.My Agent.my_sequencer@@logical_sequence.req [my_driver] A: 58 ,B:241 ,Sel:7 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 2000: reporter@@monitor_to_scb [my_monitor] A: 58 ,B:241 ,Sel:7 ,Result: 58  
+UVM_INFO Transaction.sv(17) @ 2000: reporter@@monitor_to_scb [My Scoreboard] A: 58 ,B:241 ,Sel:7 ,Result: 58  
+UVM_INFO scoreboard.sv(41) @ 2000: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 2010: uvm_test_top.Environment.My Agent.my_sequencer@@logical_sequence.req [my_driver] A:213 ,B:111 ,Sel:7 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 2020: reporter@@monitor_to_scb [my_monitor] A:213 ,B:111 ,Sel:7 ,Result:213  
+UVM_INFO Transaction.sv(17) @ 2020: reporter@@monitor_to_scb [My Scoreboard] A:213 ,B:111 ,Sel:7 ,Result:213  
+UVM_INFO scoreboard.sv(41) @ 2020: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 2030: uvm_test_top.Environment.My Agent.my_sequencer@@shift_sequence.req [my_driver] A: 12 ,B:  1 ,Sel:5 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 2040: reporter@@monitor_to_scb [my_monitor] A: 12 ,B:  1 ,Sel:5 ,Result: 24  
+UVM_INFO Transaction.sv(17) @ 2040: reporter@@monitor_to_scb [My Scoreboard] A: 12 ,B:  1 ,Sel:5 ,Result: 24  
+UVM_INFO scoreboard.sv(41) @ 2040: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 2050: uvm_test_top.Environment.My Agent.my_sequencer@@shift_sequence.req [my_driver] A:137 ,B:  4 ,Sel:6 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 2060: reporter@@monitor_to_scb [my_monitor] A:137 ,B:  4 ,Sel:6 ,Result:  8  
+UVM_INFO Transaction.sv(17) @ 2060: reporter@@monitor_to_scb [My Scoreboard] A:137 ,B:  4 ,Sel:6 ,Result:  8  
+UVM_INFO scoreboard.sv(41) @ 2060: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 2070: uvm_test_top.Environment.My Agent.my_sequencer@@shift_sequence.req [my_driver] A:242 ,B:  3 ,Sel:5 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 2080: reporter@@monitor_to_scb [my_monitor] A:242 ,B:  3 ,Sel:5 ,Result:400  
+UVM_INFO Transaction.sv(17) @ 2080: reporter@@monitor_to_scb [My Scoreboard] A:242 ,B:  3 ,Sel:5 ,Result:400  
+UVM_INFO scoreboard.sv(41) @ 2080: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 2090: uvm_test_top.Environment.My Agent.my_sequencer@@shift_sequence.req [my_driver] A:139 ,B:  0 ,Sel:5 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 2100: reporter@@monitor_to_scb [my_monitor] A:139 ,B:  0 ,Sel:5 ,Result:139  
+UVM_INFO Transaction.sv(17) @ 2100: reporter@@monitor_to_scb [My Scoreboard] A:139 ,B:  0 ,Sel:5 ,Result:139  
+UVM_INFO scoreboard.sv(41) @ 2100: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 2110: uvm_test_top.Environment.My Agent.my_sequencer@@shift_sequence.req [my_driver] A:202 ,B:  2 ,Sel:6 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 2120: reporter@@monitor_to_scb [my_monitor] A:202 ,B:  2 ,Sel:6 ,Result: 50  
+UVM_INFO Transaction.sv(17) @ 2120: reporter@@monitor_to_scb [My Scoreboard] A:202 ,B:  2 ,Sel:6 ,Result: 50  
+UVM_INFO scoreboard.sv(41) @ 2120: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 2130: uvm_test_top.Environment.My Agent.my_sequencer@@shift_sequence.req [my_driver] A: 57 ,B:  2 ,Sel:5 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 2140: reporter@@monitor_to_scb [my_monitor] A: 57 ,B:  2 ,Sel:5 ,Result:228  
+UVM_INFO Transaction.sv(17) @ 2140: reporter@@monitor_to_scb [My Scoreboard] A: 57 ,B:  2 ,Sel:5 ,Result:228  
+UVM_INFO scoreboard.sv(41) @ 2140: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 2150: uvm_test_top.Environment.My Agent.my_sequencer@@shift_sequence.req [my_driver] A:172 ,B:  6 ,Sel:5 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 2160: reporter@@monitor_to_scb [my_monitor] A:172 ,B:  6 ,Sel:5 ,Result:256  
+UVM_INFO Transaction.sv(17) @ 2160: reporter@@monitor_to_scb [My Scoreboard] A:172 ,B:  6 ,Sel:5 ,Result:256  
+UVM_INFO scoreboard.sv(41) @ 2160: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 2170: uvm_test_top.Environment.My Agent.my_sequencer@@shift_sequence.req [my_driver] A: 79 ,B:  0 ,Sel:6 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 2180: reporter@@monitor_to_scb [my_monitor] A: 79 ,B:  0 ,Sel:6 ,Result: 79  
+UVM_INFO Transaction.sv(17) @ 2180: reporter@@monitor_to_scb [My Scoreboard] A: 79 ,B:  0 ,Sel:6 ,Result: 79  
+UVM_INFO scoreboard.sv(41) @ 2180: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 2190: uvm_test_top.Environment.My Agent.my_sequencer@@shift_sequence.req [my_driver] A:128 ,B:  7 ,Sel:5 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 2200: reporter@@monitor_to_scb [my_monitor] A:128 ,B:  7 ,Sel:5 ,Result:  0  
+UVM_INFO Transaction.sv(17) @ 2200: reporter@@monitor_to_scb [My Scoreboard] A:128 ,B:  7 ,Sel:5 ,Result:  0  
+UVM_INFO scoreboard.sv(41) @ 2200: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 2210: uvm_test_top.Environment.My Agent.my_sequencer@@shift_sequence.req [my_driver] A: 86 ,B:  3 ,Sel:6 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 2220: reporter@@monitor_to_scb [my_monitor] A: 86 ,B:  3 ,Sel:6 ,Result: 10  
+UVM_INFO Transaction.sv(17) @ 2220: reporter@@monitor_to_scb [My Scoreboard] A: 86 ,B:  3 ,Sel:6 ,Result: 10  
+UVM_INFO scoreboard.sv(41) @ 2220: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 2230: uvm_test_top.Environment.My Agent.my_sequencer@@shift_sequence.req [my_driver] A:187 ,B:  4 ,Sel:5 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 2240: reporter@@monitor_to_scb [my_monitor] A:187 ,B:  4 ,Sel:5 ,Result:432  
+UVM_INFO Transaction.sv(17) @ 2240: reporter@@monitor_to_scb [My Scoreboard] A:187 ,B:  4 ,Sel:5 ,Result:432  
+UVM_INFO scoreboard.sv(41) @ 2240: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 2250: uvm_test_top.Environment.My Agent.my_sequencer@@shift_sequence.req [my_driver] A:104 ,B:  3 ,Sel:6 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 2260: reporter@@monitor_to_scb [my_monitor] A:104 ,B:  3 ,Sel:6 ,Result: 13  
+UVM_INFO Transaction.sv(17) @ 2260: reporter@@monitor_to_scb [My Scoreboard] A:104 ,B:  3 ,Sel:6 ,Result: 13  
+UVM_INFO scoreboard.sv(41) @ 2260: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 2270: uvm_test_top.Environment.My Agent.my_sequencer@@shift_sequence.req [my_driver] A:  0 ,B:  6 ,Sel:5 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 2280: reporter@@monitor_to_scb [my_monitor] A:  0 ,B:  6 ,Sel:5 ,Result:  0  
+UVM_INFO Transaction.sv(17) @ 2280: reporter@@monitor_to_scb [My Scoreboard] A:  0 ,B:  6 ,Sel:5 ,Result:  0  
+UVM_INFO scoreboard.sv(41) @ 2280: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 2290: uvm_test_top.Environment.My Agent.my_sequencer@@shift_sequence.req [my_driver] A:201 ,B:  7 ,Sel:5 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 2300: reporter@@monitor_to_scb [my_monitor] A:201 ,B:  7 ,Sel:5 ,Result:128  
+UVM_INFO Transaction.sv(17) @ 2300: reporter@@monitor_to_scb [My Scoreboard] A:201 ,B:  7 ,Sel:5 ,Result:128  
+UVM_INFO scoreboard.sv(41) @ 2300: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 2310: uvm_test_top.Environment.My Agent.my_sequencer@@shift_sequence.req [my_driver] A: 56 ,B:  5 ,Sel:6 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 2320: reporter@@monitor_to_scb [my_monitor] A: 56 ,B:  5 ,Sel:6 ,Result:  1  
+UVM_INFO Transaction.sv(17) @ 2320: reporter@@monitor_to_scb [My Scoreboard] A: 56 ,B:  5 ,Sel:6 ,Result:  1  
+UVM_INFO scoreboard.sv(41) @ 2320: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 2330: uvm_test_top.Environment.My Agent.my_sequencer@@shift_sequence.req [my_driver] A: 53 ,B:  0 ,Sel:6 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 2340: reporter@@monitor_to_scb [my_monitor] A: 53 ,B:  0 ,Sel:6 ,Result: 53  
+UVM_INFO Transaction.sv(17) @ 2340: reporter@@monitor_to_scb [My Scoreboard] A: 53 ,B:  0 ,Sel:6 ,Result: 53  
+UVM_INFO scoreboard.sv(41) @ 2340: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 2350: uvm_test_top.Environment.My Agent.my_sequencer@@shift_sequence.req [my_driver] A: 98 ,B:  1 ,Sel:5 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 2360: reporter@@monitor_to_scb [my_monitor] A: 98 ,B:  1 ,Sel:5 ,Result:196  
+UVM_INFO Transaction.sv(17) @ 2360: reporter@@monitor_to_scb [My Scoreboard] A: 98 ,B:  1 ,Sel:5 ,Result:196  
+UVM_INFO scoreboard.sv(41) @ 2360: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 2370: uvm_test_top.Environment.My Agent.my_sequencer@@shift_sequence.req [my_driver] A:146 ,B:  6 ,Sel:6 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 2380: reporter@@monitor_to_scb [my_monitor] A:146 ,B:  6 ,Sel:6 ,Result:  2  
+UVM_INFO Transaction.sv(17) @ 2380: reporter@@monitor_to_scb [My Scoreboard] A:146 ,B:  6 ,Sel:6 ,Result:  2  
+UVM_INFO scoreboard.sv(41) @ 2380: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 2390: uvm_test_top.Environment.My Agent.my_sequencer@@shift_sequence.req [my_driver] A:243 ,B:  1 ,Sel:5 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 2400: reporter@@monitor_to_scb [my_monitor] A:243 ,B:  1 ,Sel:5 ,Result:486  
+UVM_INFO Transaction.sv(17) @ 2400: reporter@@monitor_to_scb [My Scoreboard] A:243 ,B:  1 ,Sel:5 ,Result:486  
+UVM_INFO scoreboard.sv(41) @ 2400: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 2410: uvm_test_top.Environment.My Agent.my_sequencer@@shift_sequence.req [my_driver] A:249 ,B:  1 ,Sel:5 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 2420: reporter@@monitor_to_scb [my_monitor] A:249 ,B:  1 ,Sel:5 ,Result:498  
+UVM_INFO Transaction.sv(17) @ 2420: reporter@@monitor_to_scb [My Scoreboard] A:249 ,B:  1 ,Sel:5 ,Result:498  
+UVM_INFO scoreboard.sv(41) @ 2420: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 2430: uvm_test_top.Environment.My Agent.my_sequencer@@shift_sequence.req [my_driver] A: 48 ,B:  7 ,Sel:6 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 2440: reporter@@monitor_to_scb [my_monitor] A: 48 ,B:  7 ,Sel:6 ,Result:  0  
+UVM_INFO Transaction.sv(17) @ 2440: reporter@@monitor_to_scb [My Scoreboard] A: 48 ,B:  7 ,Sel:6 ,Result:  0  
+UVM_INFO scoreboard.sv(41) @ 2440: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 2450: uvm_test_top.Environment.My Agent.my_sequencer@@shift_sequence.req [my_driver] A: 83 ,B:  1 ,Sel:5 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 2460: reporter@@monitor_to_scb [my_monitor] A: 83 ,B:  1 ,Sel:5 ,Result:166  
+UVM_INFO Transaction.sv(17) @ 2460: reporter@@monitor_to_scb [My Scoreboard] A: 83 ,B:  1 ,Sel:5 ,Result:166  
+UVM_INFO scoreboard.sv(41) @ 2460: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 2470: uvm_test_top.Environment.My Agent.my_sequencer@@shift_sequence.req [my_driver] A:189 ,B:  1 ,Sel:6 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 2480: reporter@@monitor_to_scb [my_monitor] A:189 ,B:  1 ,Sel:6 ,Result: 94  
+UVM_INFO Transaction.sv(17) @ 2480: reporter@@monitor_to_scb [My Scoreboard] A:189 ,B:  1 ,Sel:6 ,Result: 94  
+UVM_INFO scoreboard.sv(41) @ 2480: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 2490: uvm_test_top.Environment.My Agent.my_sequencer@@shift_sequence.req [my_driver] A: 20 ,B:  5 ,Sel:6 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 2500: reporter@@monitor_to_scb [my_monitor] A: 20 ,B:  5 ,Sel:6 ,Result:  0  
+UVM_INFO Transaction.sv(17) @ 2500: reporter@@monitor_to_scb [My Scoreboard] A: 20 ,B:  5 ,Sel:6 ,Result:  0  
+UVM_INFO scoreboard.sv(41) @ 2500: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 2510: uvm_test_top.Environment.My Agent.my_sequencer@@shift_sequence.req [my_driver] A:155 ,B:  7 ,Sel:5 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 2520: reporter@@monitor_to_scb [my_monitor] A:155 ,B:  7 ,Sel:5 ,Result:384  
+UVM_INFO Transaction.sv(17) @ 2520: reporter@@monitor_to_scb [My Scoreboard] A:155 ,B:  7 ,Sel:5 ,Result:384  
+UVM_INFO scoreboard.sv(41) @ 2520: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 2530: uvm_test_top.Environment.My Agent.my_sequencer@@shift_sequence.req [my_driver] A:105 ,B:  7 ,Sel:6 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 2540: reporter@@monitor_to_scb [my_monitor] A:105 ,B:  7 ,Sel:6 ,Result:  0  
+UVM_INFO Transaction.sv(17) @ 2540: reporter@@monitor_to_scb [My Scoreboard] A:105 ,B:  7 ,Sel:6 ,Result:  0  
+UVM_INFO scoreboard.sv(41) @ 2540: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 2550: uvm_test_top.Environment.My Agent.my_sequencer@@shift_sequence.req [my_driver] A: 36 ,B:  3 ,Sel:5 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 2560: reporter@@monitor_to_scb [my_monitor] A: 36 ,B:  3 ,Sel:5 ,Result:288  
+UVM_INFO Transaction.sv(17) @ 2560: reporter@@monitor_to_scb [My Scoreboard] A: 36 ,B:  3 ,Sel:5 ,Result:288  
+UVM_INFO scoreboard.sv(41) @ 2560: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 2570: uvm_test_top.Environment.My Agent.my_sequencer@@shift_sequence.req [my_driver] A: 38 ,B:  5 ,Sel:6 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 2580: reporter@@monitor_to_scb [my_monitor] A: 38 ,B:  5 ,Sel:6 ,Result:  1  
+UVM_INFO Transaction.sv(17) @ 2580: reporter@@monitor_to_scb [My Scoreboard] A: 38 ,B:  5 ,Sel:6 ,Result:  1  
+UVM_INFO scoreboard.sv(41) @ 2580: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 2590: uvm_test_top.Environment.My Agent.my_sequencer@@shift_sequence.req [my_driver] A:183 ,B:  4 ,Sel:5 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 2600: reporter@@monitor_to_scb [my_monitor] A:183 ,B:  4 ,Sel:5 ,Result:368  
+UVM_INFO Transaction.sv(17) @ 2600: reporter@@monitor_to_scb [My Scoreboard] A:183 ,B:  4 ,Sel:5 ,Result:368  
+UVM_INFO scoreboard.sv(41) @ 2600: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 2610: uvm_test_top.Environment.My Agent.my_sequencer@@shift_sequence.req [my_driver] A:214 ,B:  0 ,Sel:5 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 2620: reporter@@monitor_to_scb [my_monitor] A:214 ,B:  0 ,Sel:5 ,Result:214  
+UVM_INFO Transaction.sv(17) @ 2620: reporter@@monitor_to_scb [My Scoreboard] A:214 ,B:  0 ,Sel:5 ,Result:214  
+UVM_INFO scoreboard.sv(41) @ 2620: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 2630: uvm_test_top.Environment.My Agent.my_sequencer@@shift_sequence.req [my_driver] A:154 ,B:  1 ,Sel:6 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 2640: reporter@@monitor_to_scb [my_monitor] A:154 ,B:  1 ,Sel:6 ,Result: 77  
+UVM_INFO Transaction.sv(17) @ 2640: reporter@@monitor_to_scb [My Scoreboard] A:154 ,B:  1 ,Sel:6 ,Result: 77  
+UVM_INFO scoreboard.sv(41) @ 2640: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 2650: uvm_test_top.Environment.My Agent.my_sequencer@@shift_sequence.req [my_driver] A:236 ,B:  7 ,Sel:5 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 2660: reporter@@monitor_to_scb [my_monitor] A:236 ,B:  7 ,Sel:5 ,Result:  0  
+UVM_INFO Transaction.sv(17) @ 2660: reporter@@monitor_to_scb [My Scoreboard] A:236 ,B:  7 ,Sel:5 ,Result:  0  
+UVM_INFO scoreboard.sv(41) @ 2660: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 2670: uvm_test_top.Environment.My Agent.my_sequencer@@shift_sequence.req [my_driver] A:134 ,B:  3 ,Sel:6 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 2680: reporter@@monitor_to_scb [my_monitor] A:134 ,B:  3 ,Sel:6 ,Result: 16  
+UVM_INFO Transaction.sv(17) @ 2680: reporter@@monitor_to_scb [My Scoreboard] A:134 ,B:  3 ,Sel:6 ,Result: 16  
+UVM_INFO scoreboard.sv(41) @ 2680: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 2690: uvm_test_top.Environment.My Agent.my_sequencer@@shift_sequence.req [my_driver] A:246 ,B:  3 ,Sel:5 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 2700: reporter@@monitor_to_scb [my_monitor] A:246 ,B:  3 ,Sel:5 ,Result:432  
+UVM_INFO Transaction.sv(17) @ 2700: reporter@@monitor_to_scb [My Scoreboard] A:246 ,B:  3 ,Sel:5 ,Result:432  
+UVM_INFO scoreboard.sv(41) @ 2700: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 2710: uvm_test_top.Environment.My Agent.my_sequencer@@shift_sequence.req [my_driver] A:195 ,B:  1 ,Sel:5 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 2720: reporter@@monitor_to_scb [my_monitor] A:195 ,B:  1 ,Sel:5 ,Result:390  
+UVM_INFO Transaction.sv(17) @ 2720: reporter@@monitor_to_scb [My Scoreboard] A:195 ,B:  1 ,Sel:5 ,Result:390  
+UVM_INFO scoreboard.sv(41) @ 2720: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 2730: uvm_test_top.Environment.My Agent.my_sequencer@@shift_sequence.req [my_driver] A:170 ,B:  5 ,Sel:5 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 2740: reporter@@monitor_to_scb [my_monitor] A:170 ,B:  5 ,Sel:5 ,Result:320  
+UVM_INFO Transaction.sv(17) @ 2740: reporter@@monitor_to_scb [My Scoreboard] A:170 ,B:  5 ,Sel:5 ,Result:320  
+UVM_INFO scoreboard.sv(41) @ 2740: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 2750: uvm_test_top.Environment.My Agent.my_sequencer@@shift_sequence.req [my_driver] A:149 ,B:  5 ,Sel:5 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 2760: reporter@@monitor_to_scb [my_monitor] A:149 ,B:  5 ,Sel:5 ,Result:160  
+UVM_INFO Transaction.sv(17) @ 2760: reporter@@monitor_to_scb [My Scoreboard] A:149 ,B:  5 ,Sel:5 ,Result:160  
+UVM_INFO scoreboard.sv(41) @ 2760: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 2770: uvm_test_top.Environment.My Agent.my_sequencer@@shift_sequence.req [my_driver] A:199 ,B:  3 ,Sel:5 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 2780: reporter@@monitor_to_scb [my_monitor] A:199 ,B:  3 ,Sel:5 ,Result: 56  
+UVM_INFO Transaction.sv(17) @ 2780: reporter@@monitor_to_scb [My Scoreboard] A:199 ,B:  3 ,Sel:5 ,Result: 56  
+UVM_INFO scoreboard.sv(41) @ 2780: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 2790: uvm_test_top.Environment.My Agent.my_sequencer@@shift_sequence.req [my_driver] A:229 ,B:  5 ,Sel:6 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 2800: reporter@@monitor_to_scb [my_monitor] A:229 ,B:  5 ,Sel:6 ,Result:  7  
+UVM_INFO Transaction.sv(17) @ 2800: reporter@@monitor_to_scb [My Scoreboard] A:229 ,B:  5 ,Sel:6 ,Result:  7  
+UVM_INFO scoreboard.sv(41) @ 2800: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 2810: uvm_test_top.Environment.My Agent.my_sequencer@@shift_sequence.req [my_driver] A: 51 ,B:  5 ,Sel:6 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 2820: reporter@@monitor_to_scb [my_monitor] A: 51 ,B:  5 ,Sel:6 ,Result:  1  
+UVM_INFO Transaction.sv(17) @ 2820: reporter@@monitor_to_scb [My Scoreboard] A: 51 ,B:  5 ,Sel:6 ,Result:  1  
+UVM_INFO scoreboard.sv(41) @ 2820: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 2830: uvm_test_top.Environment.My Agent.my_sequencer@@shift_sequence.req [my_driver] A: 16 ,B:  2 ,Sel:6 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 2840: reporter@@monitor_to_scb [my_monitor] A: 16 ,B:  2 ,Sel:6 ,Result:  4  
+UVM_INFO Transaction.sv(17) @ 2840: reporter@@monitor_to_scb [My Scoreboard] A: 16 ,B:  2 ,Sel:6 ,Result:  4  
+UVM_INFO scoreboard.sv(41) @ 2840: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 2850: uvm_test_top.Environment.My Agent.my_sequencer@@shift_sequence.req [my_driver] A: 52 ,B:  5 ,Sel:6 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 2860: reporter@@monitor_to_scb [my_monitor] A: 52 ,B:  5 ,Sel:6 ,Result:  1  
+UVM_INFO Transaction.sv(17) @ 2860: reporter@@monitor_to_scb [My Scoreboard] A: 52 ,B:  5 ,Sel:6 ,Result:  1  
+UVM_INFO scoreboard.sv(41) @ 2860: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 2870: uvm_test_top.Environment.My Agent.my_sequencer@@shift_sequence.req [my_driver] A: 92 ,B:  4 ,Sel:6 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 2880: reporter@@monitor_to_scb [my_monitor] A: 92 ,B:  4 ,Sel:6 ,Result:  5  
+UVM_INFO Transaction.sv(17) @ 2880: reporter@@monitor_to_scb [My Scoreboard] A: 92 ,B:  4 ,Sel:6 ,Result:  5  
+UVM_INFO scoreboard.sv(41) @ 2880: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 2890: uvm_test_top.Environment.My Agent.my_sequencer@@shift_sequence.req [my_driver] A:157 ,B:  1 ,Sel:6 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 2900: reporter@@monitor_to_scb [my_monitor] A:157 ,B:  1 ,Sel:6 ,Result: 78  
+UVM_INFO Transaction.sv(17) @ 2900: reporter@@monitor_to_scb [My Scoreboard] A:157 ,B:  1 ,Sel:6 ,Result: 78  
+UVM_INFO scoreboard.sv(41) @ 2900: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 2910: uvm_test_top.Environment.My Agent.my_sequencer@@shift_sequence.req [my_driver] A:131 ,B:  3 ,Sel:6 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 2920: reporter@@monitor_to_scb [my_monitor] A:131 ,B:  3 ,Sel:6 ,Result: 16  
+UVM_INFO Transaction.sv(17) @ 2920: reporter@@monitor_to_scb [My Scoreboard] A:131 ,B:  3 ,Sel:6 ,Result: 16  
+UVM_INFO scoreboard.sv(41) @ 2920: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 2930: uvm_test_top.Environment.My Agent.my_sequencer@@shift_sequence.req [my_driver] A: 15 ,B:  2 ,Sel:5 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 2940: reporter@@monitor_to_scb [my_monitor] A: 15 ,B:  2 ,Sel:5 ,Result: 60  
+UVM_INFO Transaction.sv(17) @ 2940: reporter@@monitor_to_scb [My Scoreboard] A: 15 ,B:  2 ,Sel:5 ,Result: 60  
+UVM_INFO scoreboard.sv(41) @ 2940: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 2950: uvm_test_top.Environment.My Agent.my_sequencer@@shift_sequence.req [my_driver] A:203 ,B:  7 ,Sel:5 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 2960: reporter@@monitor_to_scb [my_monitor] A:203 ,B:  7 ,Sel:5 ,Result:384  
+UVM_INFO Transaction.sv(17) @ 2960: reporter@@monitor_to_scb [My Scoreboard] A:203 ,B:  7 ,Sel:5 ,Result:384  
+UVM_INFO scoreboard.sv(41) @ 2960: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 2970: uvm_test_top.Environment.My Agent.my_sequencer@@shift_sequence.req [my_driver] A:115 ,B:  0 ,Sel:6 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 2980: reporter@@monitor_to_scb [my_monitor] A:115 ,B:  0 ,Sel:6 ,Result:115  
+UVM_INFO Transaction.sv(17) @ 2980: reporter@@monitor_to_scb [My Scoreboard] A:115 ,B:  0 ,Sel:6 ,Result:115  
+UVM_INFO scoreboard.sv(41) @ 2980: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 2990: uvm_test_top.Environment.My Agent.my_sequencer@@shift_sequence.req [my_driver] A: 76 ,B:  7 ,Sel:6 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 3000: reporter@@monitor_to_scb [my_monitor] A: 76 ,B:  7 ,Sel:6 ,Result:  0  
+UVM_INFO Transaction.sv(17) @ 3000: reporter@@monitor_to_scb [My Scoreboard] A: 76 ,B:  7 ,Sel:6 ,Result:  0  
+UVM_INFO scoreboard.sv(41) @ 3000: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Transaction.sv(17) @ 3010: uvm_test_top.Environment.My Agent.my_sequencer@@shift_sequence.req [my_driver] A:202 ,B:  3 ,Sel:5 ,Result:  x  
+UVM_INFO Transaction.sv(17) @ 3020: reporter@@monitor_to_scb [my_monitor] A:202 ,B:  3 ,Sel:5 ,Result: 80  
+UVM_INFO Transaction.sv(17) @ 3020: reporter@@monitor_to_scb [My Scoreboard] A:202 ,B:  3 ,Sel:5 ,Result: 80  
+UVM_INFO scoreboard.sv(41) @ 3020: uvm_test_top.Environment.My Scoreboard [] Output MATCHED!
+UVM_INFO Test.sv(44) @ 3020: uvm_test_top [uvm_test_top] <run_phase> finished, objection dropped.
+UVM_INFO Test.sv(45) @ 3020: uvm_test_top [uvm_test_top] End Of Test
+UVM_INFO /proj/cad/CADENCE/XceliumMain/XCELIUMMAIN22.09.001/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_objection.svh(1268) @ 3020: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO cov_monitor.sv(39) @ 3020: uvm_test_top.Environment.My Agent.my_cov_monitor [my_cov_monitor] Coverage:        100 
+UVM_INFO scoreboard.sv(55) @ 3020: uvm_test_top.Environment.My Scoreboard [My Scoreboard] Pass:        150, Fails:          0 
+
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  608
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[]   150
+[My Scoreboard]   151
+[RNTST]     1
+[TEST_DONE]     1
+[my_cov_monitor]     1
+[my_driver]   150
+[my_monitor]   150
+[uvm_test_top]     4
+Simulation complete via $finish(1) at time 3020 NS + 50
+/proj/cad/CADENCE/XceliumMain/XCELIUMMAIN22.09.001/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_root.svh:457     $finish;
+xcelium> exit
+xmsim: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+xmsim: *W,CGPIZE: Instance coverage for covergroup instance "cg_transaction" will not be dumped to database as per_instance option value is set to 0:./cov_monitor.sv, 23.
+xmsim: *W,CGPIZE: Instance coverage for covergroup instance "cg_transaction" will not be dumped to database as per_instance option value is set to 0:./cov_monitor.sv, 23.
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  TB_Top(TB_Top)
+  scope    :  scope
+  testname :  test
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_00000000_4e6f02c4.ucm (reused)
+  data               :  ./cov_work/scope/test/icc_00000000_4e6f02c4.ucd
+TOOL:	xrun	22.09-s001: Exiting on Dec 21, 2023 at 10:14:29 PST  (total: 00:00:03)
